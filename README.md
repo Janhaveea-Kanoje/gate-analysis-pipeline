@@ -1,6 +1,6 @@
-# Code Nutrition — Automated 5-Gate Supplement Verification Pipeline
+# Gate Analysis — Automated 5-Gate Supplement Verification Pipeline
 
-An automated implementation of the Code Nutrition framework: a sequential,
+An automated implementation of the Gate Analysis framework: a sequential,
 binary-gate methodology for evaluating dietary supplement products across
 Formulation Viability, Regulatory Compliance, Quality Verification, Brand
 Integrity, and Medical Appropriateness. Built as part of an MSc dissertation

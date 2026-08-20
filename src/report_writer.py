@@ -64,7 +64,7 @@ def write_report(results: list[PipelineResult], output_path: str) -> None:
     ws4 = wb.create_sheet("Gate 4 — Medical")
     _write_header(ws4, "GATE 4 — MEDICAL APPROPRIATENESS", GATE4_HEADERS)
     ws_pass = wb.create_sheet("All-Gate PASS List")
-    _write_header(ws_pass, "CODE NUTRITION — SUPPLEMENTS & BRANDS THAT PASSED ALL GATES (0 → 4)", PASS_LIST_HEADERS)
+    _write_header(ws_pass, "GATE ANALYSIS — SUPPLEMENTS & BRANDS THAT PASSED ALL GATES (0 → 4)", PASS_LIST_HEADERS)
 
     for r in results:
         if r.gate0:

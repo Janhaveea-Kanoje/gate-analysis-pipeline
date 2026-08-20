@@ -1,5 +1,5 @@
 """
-Data models for the Code Nutrition gate pipeline.
+Data models for the Gate Analysis pipeline.
 
 Every field name here was taken directly from CN_Final_Corrected.xlsx so that
 report_writer.py can regenerate that exact workbook shape from pipeline output.
