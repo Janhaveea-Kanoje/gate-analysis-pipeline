@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}Try a Product{% endblock %}
+{% block content %}
+
+<div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Live pipeline</div></div>
+<h1 style="font-size:2.2rem;">Try a product</h1>
+<p style="color:#4A4740; max-width:640px;">This runs the real pipeline code. Every dropdown filters to real, evidence-backed or ground-truth options for whatever you pick.</p>
+
+<div class="card-box">
+    <h3>Basic product details</h3>
+    <div class="form-grid">
+        <div>
+            <label for="category">Ingredient category</label>
+            <select id="category"></select>
+        </div>
+        <div>
+            <label for="form">Ingredient form</label>
+            <select id="form"></select>
+        </div>
+        <div>
+            <label for="brand">Brand</label>
+            <select id="brand"></select>
+            <input type="text" id="brand-other" placeholder="Enter brand name" style="display:none; margin-top:0.4rem;">
+        </div>
+        <div>
+            <label for="product-name">Product name</label>
+            <select id="product-name"></select>
+            <input type="text" id="product-name-other" placeholder="Enter product name" style="display:none; margin-top:0.4rem;">
+        </div>
+    </div>
+
+    <h3 style="margin-top:1.5rem;">Dose &amp; use case</h3>
+    <div class="form-grid">
+        <div>
+            <label for="dose">Amount</label>
+            <select id="dose"></select>
+            <input type="number" id="dose-other" placeholder="Enter amount manually" style="display:none; margin-top:0.4rem;">
+        </div>
+        <div>
+            <label for="unit">Unit</label>
+            <select id="unit">
+                <option>mg</option><option>mcg</option><option>g</option><option>IU</option>
+            </select>
+        </div>
+        <div>
+            <label for="use-case">Claimed use case</label>
+            <select id="use-case"></select>
+        </div>
+        <div>
+            <label for="population">Target population</label>
+            <select id="population">
+                <option>adult</option><option>elderly</option><option>pregnant</option><option>child</option>
+            </select>
+        </div>
+    </div>
+
+    <details style="margin-top:1rem;">
+        <summary style="cursor:pointer; font-weight:500; padding:0.6rem 0;">Advanced: regulatory, quality &amp; brand details (defaults are a clean, passing example)</summary>
+        <div style="padding-top:1rem;">
+            <h3>Gate 1 — Regulatory</h3>
+            <div class="form-grid">
+                <div>
+                    <label for="gmp-body">GMP certifying body</label>
+                    <select id="gmp-body">
+                        <option>NSF</option><option>Informed Sport</option><option>USP</option><option>BRCGS</option><option>None / Unknown</option>
+                    </select>
+                </div>
+                <div>
+                    <label><input type="checkbox" id="has-batch" checked> Has batch/lot tracking</label>
+                    <label style="margin-top:0.6rem;"><input type="checkbox" id="makes-disease-claim"> Label makes a disease claim</label>
+                    <label style="margin-top:0.6rem;"><input type="checkbox" id="contraindications-disclosed" checked> Contraindications disclosed</label>
+                </div>
+            </div>
+
+            <h3>Gate 2 — Quality (lab data, hypothetical for this demo)</h3>
+            <div class="form-grid">
+                <div><label for="lead">Lead (ppm)</label><input type="number" id="lead" value="0.05" step="0.001"></div>
+                <div><label for="mercury">Mercury (ppm)</label><input type="number" id="mercury" value="0.01" step="0.001"></div>
+                <div><label for="cadmium">Cadmium (ppm)</label><input type="number" id="cadmium" value="0.02" step="0.001"></div>
+                <div><label for="arsenic">Arsenic (ppm)</label><input type="number" id="arsenic" value="0.1" step="0.001"></div>
+            </div>
+
+            <h3>Gate 3 — Brand Integrity</h3>
+            <label for="disclosure-text">Free-text disclosure statement (as a reviewer might write it)</label>
+            <textarea id="disclosure-text" rows="2"></textarea>
+            <p style="font-size:0.85rem; color:var(--muted);">If this mentions "X Ltd/Limited/PLC", that exact company is checked live on Companies House.</p>
+
+            <h3>Gate 4 — Medical (cited-study data, if you have it)</h3>
+            <div class="form-grid">
+                <div><label for="cited-dose">Cited study dose (mg, 0 = none available)</label><input type="number" id="cited-dose" value="0"></div>
+                <div><label for="cited-form">Cited study form (blank = none available)</label><input type="text" id="cited-form"></div>
+            </div>
+        </div>
+    </details>
+
+    <button class="primary" id="run-btn" style="margin-top:1.5rem;" disabled>Run through the pipeline</button>
+</div>
+
+<div id="results" style="display:none;"></div>
+
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/try_product.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,335 @@
+supplement,drug,severity,mechanism,management
+Magnesium,Tetracycline,Moderate,Magnesium chelates tetracycline reducing absorption,Separate doses by 2-4 hours
+Magnesium,Bisphosphonates,Moderate,Reduced bisphosphonate absorption,Separate doses by 2 hours
+St John's Wort,Warfarin,Major,Induces CYP enzymes reducing anticoagulant effect,Avoid combination; monitor INR if unavoidable
+Vitamin K,Warfarin,Major,Directly antagonises anticoagulant mechanism,Avoid or maintain strictly consistent intake
+Iron,Levothyroxine,Moderate,Reduced thyroid hormone absorption,Separate doses by 4 hours
+Magnesium Citrate,Hydrocortisone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Triamcinolone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Dexamethasone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Betamethasone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Corticotropin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Tetracosactide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Deflazacort,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Doxercalciferol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Glycinate,Doxercalciferol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Liothyronine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Methylprednisolone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Osilodrostat,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Oxytocin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Paricalcitol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Glycinate,Paricalcitol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Pasireotide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Prednisone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Triamcinolone (ophthalmic),Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Prednisolone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Fludrocortisone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Dolutegravir,Major,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Dolutegravir,Major,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Abiraterone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Tramadol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Acetazolamide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Rabeprazole,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Doxycycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Doxycycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Salbutamol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Alendronic acid,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Alendronic acid,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Alfuzosin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Hydrochlorothiazide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Amiloride,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Amiodarone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Amisulpride,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Anagrelide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Propofol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Sodium citrate,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Apalutamide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Apomorphine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Arsenic trioxide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Lumefantrine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Asenapine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Omeprazole,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Risedronic acid,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Risedronic acid,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Atomoxetine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Azithromycin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Baloxavir marboxil,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Baloxavir marboxil,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Bicalutamide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Bictegravir,Major,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Bictegravir,Major,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Tetracycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Tetracycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Ibandronate,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ibandronate,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Bosutinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Bumetanide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Buprenorphine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Cabozantinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Calcifediol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Calcitriol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Levodopa,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Spironolactone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Cefdinir,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ceritinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Chloramphenicol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Chlorothiazide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Chlorthalidone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Cholecalciferol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Cilostazol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Cimetidine,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Ciprofloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ciprofloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Citalopram,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Clarithromycin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Magnesium oxide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Clofazimine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Clozapine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Prochlorperazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Pancrelipase,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Crizotinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Dasatinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Deferiprone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Deferiprone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Degarelix,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Delafloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Delafloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Deutetrabenazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Dexlansoprazole,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Diclofenamide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Dimercaprol,Major,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Methadone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Disopyramide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Dofetilide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Dolasetron,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Dronedarone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Droperidol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Minocycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Minocycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Erythromycin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Efavirenz,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Eltrombopag,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Eltrombopag,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Glycinate,Eltrombopag,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Rilpivirine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Encorafenib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Leuprolide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,"Thyroid, porcine",Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Linaclotide,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Liotrix,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Lopinavir,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Methyldopa,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Zinc sulfate,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Esomeprazole,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Palonosetron,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Fluoxetine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Trazodone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Omadacycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Omadacycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Patiromer,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Patiromer,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Pentamidine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Dextropropoxyphene,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Risperidone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Tolevamer,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Tolevamer,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Sodium sulfate,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Magnesium sulfate,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Vardenafil,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Triethylenetetramine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Triethylenetetramine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Triptorelin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Zinc acetate,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Inotuzumab ozogamicin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Paliperidone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Saquinavir,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Irinotecan,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Iron Dextran,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Iron sucrose,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Vitamin E,Iron sucrose,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ivosidenib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Chondroitin Sulfate,Warfarin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Echinacea,Warfarin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Ginkgo Biloba,Warfarin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+St. John's Wort,Warfarin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Turmeric,Warfarin,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Vitamin E,Warfarin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ketoconazole,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Moxifloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Moxifloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Mycophenolate mofetil,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Mycophenolic acid,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Lansoprazole,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Lanthanum carbonate,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Lapatinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Lefamulin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Lenvatinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Levofloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Levofloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Lisdexamfetamine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Lofexidine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Magnesium chloride,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Mannitol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Mefloquine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Methazolamide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Metolazone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Midostaurin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Mifepristone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Mirtazapine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Lactulose,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Nilotinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Nilutamide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Norfloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Norfloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Ofloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ofloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Oliceridine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ondansetron,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Osimertinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Oxaliplatin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Panobinostat,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Pantoprazole,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Pazopanib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Penicillamine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Penicillamine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Perflutren,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Pimavanserin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Pimozide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Pitolisant,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Posaconazole,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Procainamide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Propafenone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Quetiapine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Quinine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Raltegravir,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ranolazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ribociclib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Romidepsin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Sarecycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Sarecycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Selpercatinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Sertraline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Sevoflurane,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Siponimod,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Sodium bicarbonate,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Solifenacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Sorafenib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Sotalol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Sunitinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Telavancin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Telithromycin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Tetrabenazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Toremifene,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Torasemide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Triamterene,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Triclabendazole,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Valbenazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Vandetanib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Vemurafenib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Venlafaxine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Voriconazole,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ziprasidone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Entacapone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Entrectinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Enzalutamide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Erdafitinib,Major,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ergocalciferol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Eribulin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Escitalopram,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Etacrynic acid,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Etidronic acid,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Etidronic acid,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ezogabine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Calcium carbonate,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Ferric carboxymaltose,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Ferric derisomaltose,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Sodium ferric gluconate complex,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Ferumoxytol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Flecainide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Fluconazole,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Fluphenazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Flutamide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Foscarnet,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Fostemsavir,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Furosemide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Gemifloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Gemifloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Gilteritinib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Glasdegib,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Goserelin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Granisetron,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Haloperidol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Histrelin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Hydroxychloroquine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Hydroxyzine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Ibutilide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Iloperidone,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Indapamide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Bedaquiline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Chlorpromazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Demeclocycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Demeclocycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Cinoxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Enoxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Gallium chloride Ga-67,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Gatifloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Grepafloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Lomefloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Magaldrate,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Magnesium carbonate,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Magnesium hydroxide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Nalidixic acid,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Oxytetracycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Saw palmetto,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Sparfloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+St. John's Wort,Iron,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Tiludronic acid,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Trovafloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Vitamin E,Iron,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Zinc gluconate,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Saw Palmetto,Ferrous fumarate,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+St. John's Wort,Ferrous fumarate,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Vitamin E,Ferrous fumarate,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Saw Palmetto,Ferrous gluconate,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+St. John's Wort,Ferrous gluconate,Minor,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Vitamin E,Ferrous gluconate,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Iron,Aluminum hydroxide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Fludeoxyglucose (18F),Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Gatifloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Irinotecan (liposomal),Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Abarelix,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Astemizole,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Bendroflumethiazide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Benzthiazide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Bepridil,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Cinoxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Cisapride,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Dihydrotachysterol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Enoxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Grepafloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Halofantrine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Hydroflumethiazide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Levacetylmethadol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Lomefloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Mesoridazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Methotrimeprazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Nalidixic acid,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Oxytetracycline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Perphenazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Polythiazide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Primaquine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Probucol,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Promazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Quinidine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Relugolix,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Sparfloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Terbutaline,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Terfenadine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Thioridazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Tiludronic acid,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Trichlormethiazide,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Trifluoperazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Triflupromazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Alimemazine,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Trovafloxacin,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining
+Magnesium Citrate,Urea,Moderate,"Not specified in source data (DDInter provides severity only, not mechanism text, for this record)",Consult a pharmacist or prescriber before combining

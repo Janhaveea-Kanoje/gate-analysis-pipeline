@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}Methodology{% endblock %}
+{% block content %}
+
+<div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Methodology</div></div>
+<h1 style="font-size:2.2rem;">How this actually works</h1>
+
+<h3>The core design rule: AI reads, rules decide</h3>
+<p style="color:#4A4740;">
+Every gate in this pipeline follows one strict rule: a large language model is only ever
+allowed to <strong>read messy text and turn it into structured data</strong> (e.g. "what form and dose
+does this label describe?"). It is <strong>never</strong> allowed to make the actual pass/fail decision.
+That decision always comes from plain, fixed, deterministic code.
+</p>
+<p style="color:#4A4740;">
+This matters because language models are known to occasionally get precise numbers wrong —
+a real risk for a health-adjacent decision. Keeping AI restricted to reading, and rules
+restricted to deciding, means every decision this tool makes can be traced back to an
+explicit, checkable threshold, not a model's best guess.
+</p>
+
+<hr class="divider">
+<h3>Where each gate gets its evidence</h3>
+<table>
+    <tr><th>Gate</th><th>Source</th></tr>
+    <tr><td>Gate 0 — Formulation</td><td>A 101-ingredient evidence file (forms, safe dose ranges) built from the research team's data</td></tr>
+    <tr><td>Gate 1 — Regulatory</td><td>The live UK Food Standards Agency Novel Food register — a real government database, checked in real time</td></tr>
+    <tr><td>Gate 2 — Quality</td><td>No open dataset exists for this yet — the biggest remaining gap, being worked on with a research contact</td></tr>
+    <tr><td>Gate 3 — Brand Integrity</td><td>Live UK Companies House (company verification) + live FSA Food Alerts (recall history)</td></tr>
+    <tr><td>Gate 4 — Medical</td><td>The same evidence file as Gate 0, used as a stand-in for a full clinical-study-dose database that doesn't exist yet</td></tr>
+</table>
+
+<hr class="divider">
+<h3>The headline finding</h3>
+<div class="card-box" style="border-left:4px solid var(--gold);">
+    Across every gate tested, the <strong>plain database lookup</strong> (Gate 1) outperformed every
+    <strong>AI-assisted text-reading</strong> approach (Gates 0 and 4) — even after multiple rounds of
+    fixing the reading step. Where a question can be answered by checking a real database
+    directly, this project's evidence says that beats asking an AI model to read and decide,
+    every time it was tested.
+</div>
+
+<hr class="divider">
+<div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Section 01 · Outcomes</div></div>
+<h3>Verdict states</h3>
+<p style="color:#4A4740;">A product clearing all five gates receives one of three tiers — never a numeric score, and never partial credit for a gate it didn't clear.</p>
+<div class="gate-grid">
+    <div class="gate-card" style="border-top-color:var(--pass-text);">
+        <span class="pill pill-pass">Tier 1</span>
+        <p style="margin-top:0.8rem; font-size:0.9rem;">All 5 gates pass, using Superior-tier forms at the upper end of the evidence-based dose range, with premium (ISO 17025) testing. Requires expert panel consensus before publication — this pipeline flags it, it does not auto-publish it.</p>
+    </div>
+    <div class="gate-card" style="border-top-color:var(--pass-text);">
+        <span class="pill pill-pass">Tier 2</span>
+        <p style="margin-top:0.8rem; font-size:0.9rem;">All 5 gates pass, using acceptable (not necessarily Superior) forms or doses outside the upper range.</p>
+    </div>
+    <div class="gate-card" style="border-top-color:var(--conditional-text);">
+        <span class="pill pill-conditional">Tier 3</span>
+        <p style="margin-top:0.8rem; font-size:0.9rem;">All 5 gates pass, but neither the Superior-form nor upper-dose-range condition is met — a baseline, adequate product.</p>
+    </div>
+    <div class="gate-card" style="border-top-color:var(--fail-text);">
+        <span class="pill pill-fail">Tier 0</span>
+        <p style="margin-top:0.8rem; font-size:0.9rem;">Failed at least one gate. Evaluation stops at the first failing gate — a product is never assessed against later gates once it has failed an earlier one.</p>
+    </div>
+</div>
+
+<hr class="divider">
+<div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Section 02 · The corpus</div></div>
+<h3>How the ground truth was built</h3>
+<div class="step-card"><div class="step-number">01</div><div class="step-title">Manual review</div><div class="step-desc">A single researcher applied the same five-gate criteria this pipeline now applies automatically, to roughly 1,850 real UK products — before any of this automation existed.</div></div>
+<div class="step-card"><div class="step-number">02</div><div class="step-title">Evidence base</div><div class="step-desc">Forms and safe-dose ranges for 101 ingredients were compiled from the research team's clinical evidence sources.</div></div>
+<div class="step-card"><div class="step-number">03</div><div class="step-title">Extraction</div><div class="step-desc">A large language model reads each product's free-text label and turns it into structured form and dose data — it never decides pass or fail.</div></div>
+<div class="step-card"><div class="step-number">04</div><div class="step-title">Rule engine</div><div class="step-desc">Fixed, deterministic thresholds compare the extracted data against the evidence base to reach a verdict.</div></div>
+<div class="step-card"><div class="step-number">05</div><div class="step-title">Comparison</div><div class="step-desc">The automated verdict is checked against the original manual review, using Cohen's kappa to correct for chance agreement rather than raw percentage alone.</div></div>
+
+<p style="color:#4A4740; margin-top:1rem;">
+This matters for how the accuracy numbers on the previous page should be read: they measure
+agreement with <strong>one reviewer's judgement</strong>, not against an independent panel. The framework's
+own design already requires panel consensus for its highest-confidence tier (Tier 1, above) —
+this dissertation is transparent that its ground truth does not yet meet that same bar, and
+names independent expert-panel labelling as a specific direction for future work rather than
+treating the current ground truth as beyond question.
+</p>
+
+<hr class="divider">
+<div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Section 03 · Honesty</div></div>
+<h3>What this pipeline doesn't claim</h3>
+<p style="color:#4A4740;">This automated pipeline is a research prototype, evaluated against real data, not a certified consumer product. Stated plainly:</p>
+<ul style="color:#4A4740;">
+    <li><strong>It is not a medical endorsement, and not a guarantee of individual safety</strong> for any person or product.</li>
+    <li><strong>Gate 2 has no empirical result.</strong> No open dataset of batch-specific laboratory certificates exists anywhere — this is stated as a data gap, not glossed over as "in progress."</li>
+    <li><strong>Gate 4 uses a safety-threshold proxy</strong>, not an implementation of its actual defined requirement (matching a product's dose against the specific clinical study it cites) — that real per-study dose database does not exist yet.</li>
+    <li><strong>Outcomes depend on the evidence available at assessment time.</strong> New evidence, or a corrected evidence-file entry (this project already found and fixed one real contradiction in its own source data), can change a prior result.</li>
+    <li><strong>Every live API this pipeline depends on</strong> (FSA Novel Food, FSA Food Alerts, UK Companies House) is a third-party government service outside this project's control — several real integration errors were caught and corrected during this work, illustrating that such dependencies need ongoing verification, not a one-time integration effort.</li>
+</ul>
+
+{% endblock %}

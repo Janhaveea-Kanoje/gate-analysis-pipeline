@@ -1,0 +1,13 @@
+ingredient,population,unit,min_effective_dose,optimal_low,optimal_high,upper_limit,source
+Magnesium,adult,mg,150,300,400,350,NIH ODS Magnesium Fact Sheet (UL is for supplemental magnesium only)
+Magnesium,elderly,mg,150,300,400,350,NIH ODS Magnesium Fact Sheet
+Magnesium,pregnant,mg,150,300,350,350,NIH ODS Magnesium Fact Sheet
+Vitamin D,adult,IU,400,1000,2000,4000,NIH ODS Vitamin D Fact Sheet
+Vitamin D,elderly,IU,800,2000,4000,4000,NIH ODS Vitamin D Fact Sheet
+Vitamin D,pregnant,IU,400,1000,2000,4000,NIH ODS Vitamin D Fact Sheet
+Vitamin D,child,IU,200,400,1000,2500,NIH ODS Vitamin D Fact Sheet
+Omega-3 DHA,adult,mg,250,450,1000,3000,EFSA health claim opinion - DHA/EPA
+Curcumin,adult,mg,500,500,2000,NA,multiple RCTs - anti-inflammatory dose range, requires piperine/lipid co-factor
+L-Theanine,adult,mg,100,200,400,NA,sleep/stress RCTs
+Melatonin,adult,mg,0.5,1,5,10,sleep RCTs
+Valerian,adult,mg,300,400,900,NA,sleep RCTs

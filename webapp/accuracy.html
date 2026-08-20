@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}Accuracy & Validation{% endblock %}
+{% block content %}
+
+<div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">The evidence</div></div>
+<h1 style="font-size:2.2rem;">Accuracy &amp; validation</h1>
+<p style="color:#4A4740; max-width:640px;">Every number here comes from comparing the automated pipeline against manually-reviewed real products.</p>
+
+<h3>Sample sizes behind each result</h3>
+<table>
+    <tr><th>Gate / check</th><th>Products compared</th></tr>
+    <tr><td>Gate 0 (Form + Dose)</td><td>806</td></tr>
+    <tr><td>Gate 1 (Novel Food)</td><td>766</td></tr>
+    <tr><td>Gate 3 (Regulatory History)</td><td>280</td></tr>
+    <tr><td>Gate 3 (Full Disclosure)</td><td>281</td></tr>
+    <tr><td>Gate 4 (Form + Dose)</td><td>165</td></tr>
+</table>
+<p style="font-size:0.85rem; color:var(--muted);">Total: ~3,100 usable ground-truth rows across all gates, ~2,300 individual comparisons once every sub-check is counted.</p>
+
+<hr class="divider">
+<h3>Gate 1 — the full improvement story</h3>
+<p style="color:#4A4740;">This gate went through five real iterations before reaching its final result. Nothing here is a first-try number.</p>
+<div id="gate1-chart" style="height:400px;"></div>
+<table style="margin-top:1rem;">
+    <tr><th>Iteration</th><th>Kappa</th></tr>
+    <tr><td>1. Wrong API endpoint</td><td>—</td></tr>
+    <tr><td>2. Fixed endpoint, wrong JSON parsing</td><td>—</td></tr>
+    <tr><td>3. Category-level matching</td><td>0.001</td></tr>
+    <tr><td>4. Product-level (reversed) matching</td><td>-0.017</td></tr>
+    <tr><td>5. Hybrid — final</td><td>0.412</td></tr>
+</table>
+
+<hr class="divider">
+<h3>Gate 4 — before and after fixing extraction</h3>
+<div id="gate4-chart" style="height:380px;"></div>
+<div class="card-box" style="border-left:4px solid var(--gold); margin-top:1rem;">
+    Notice the majority-class baseline (88.4%) beats the raw agreement of both real versions. This is exactly
+    why kappa is reported everywhere in this project — a high percentage next to a low kappa means the check
+    isn't actually adding much insight over just guessing the common answer.
+</div>
+
+<hr class="divider">
+<h3>What each gate's remaining errors are actually caused by</h3>
+<table>
+    <tr><th>Gate</th><th>Main cause of remaining disagreement</th></tr>
+    <tr><td>Gate 0</td><td>Comparing 1-2 parameters against a 5-parameter manual decision</td></tr>
+    <tr><td>Gate 1</td><td>Species/strain-specific cases not stated in a product's name (Cordyceps, Krill Oil, etc.)</td></tr>
+    <tr><td>Gate 3 (Reg. History)</td><td>Checks brand-level, not product-level; doesn't cover advertising-claim rulings</td></tr>
+    <tr><td>Gate 3 (Disclosure)</td><td>Only checks company existence, not the full compound "Full Disclosure" criterion</td></tr>
+    <tr><td>Gate 4</td><td>Tests a safety-threshold proxy, not the framework's actual cited-study-match requirement</td></tr>
+</table>
+
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script>
+const goldColor = "#BF9A2E";
+const darkColor = "#171D24";
+
+Plotly.newPlot('gate1-chart', [{
+    x: ["3. Category-level", "4. Product-level (reversed)", "5. Hybrid — final"],
+    y: [0.001, -0.017, 0.412],
+    type: 'scatter', mode: 'lines+markers',
+    line: {color: goldColor, width: 3}, marker: {size: 10, color: goldColor},
+}], {
+    title: "Gate 1: Cohen's kappa across iterations (first two failed outright — 0 successful API calls)",
+    font: {family: "Inter, sans-serif"},
+    paper_bgcolor: "white", plot_bgcolor: "white",
+    yaxis: {title: "Cohen's kappa"},
+}, {responsive: true});
+
+Plotly.newPlot('gate4-chart', [{
+    x: ["Majority-class baseline\n(always guess PASS)", "Before extraction fix", "After extraction fix"],
+    y: [0.000, 0.069, 0.108],
+    type: 'bar', marker: {color: darkColor},
+}], {
+    title: "Gate 4: kappa improved even though raw agreement dropped",
+    font: {family: "Inter, sans-serif"},
+    paper_bgcolor: "white", plot_bgcolor: "white",
+    yaxis: {title: "Cohen's kappa"},
+}, {responsive: true});
+</script>
+{% endblock %}

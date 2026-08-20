@@ -1,0 +1,22 @@
+ingredient_a,ingredient_b,issue,source
+Iron,Calcium,Compete for the same absorption pathway; take-together reduces both,NIH ODS
+Calcium (high-dose),Magnesium (high-dose),Antagonistic absorption at high combined doses,NIH ODS
+Vitamin D,none-without-fat,Fat-soluble vitamin requires a lipid to absorb; flag if formulation has no fat/oil carrier,NIH ODS
+Vitamin A,none-without-fat,Fat-soluble vitamin requires a lipid to absorb,NIH ODS
+Vitamin E,none-without-fat,Fat-soluble vitamin requires a lipid to absorb,NIH ODS
+Vitamin K,none-without-fat,Fat-soluble vitamin requires a lipid to absorb,NIH ODS
+Zinc (high-dose),Copper,Chronic high-dose zinc induces copper deficiency,NIH ODS
+Vitamin C,Calcium,"Some buffered forms contain high calcium, problematic combined with vitamin C",science_research.xlsx
+Vitamin D3,Calcium,"High-dose combination can cause problems, especially with thiazide diuretics",science_research.xlsx
+B-Complex,Folic Acid,Folic acid can mask a B12 deficiency when combined,science_research.xlsx
+Vitamin B12,Vitamin B6,Excessive vitamin B6 combined with B12 creates neuropathy risk,science_research.xlsx
+Vitamin E,Vitamin K,Excessive alpha-tocopherol without vitamin K consideration may increase bleeding risk,science_research.xlsx
+Copper,Zinc,Excess copper without zinc balance may increase oxidative stress and GI toxicity,science_research.xlsx
+Rosemary Extract,Camphor,High levels of camphor combined with rosemary oil increases neuroactive terpene exposure,science_research.xlsx
+5-HTP,Tryptophan,Risky combination with serotonergic agents,science_research.xlsx
+Magnesium Citrate,Senna,Combining high magnesium citrate with other laxatives may cause excessive laxative effect,science_research.xlsx
+Green Tea Extract,Caffeine,Stimulant stacking with caffeine can be problematic,science_research.xlsx
+Beta-Alanine,Caffeine,Excess caffeine combined with beta-alanine in proprietary blends that mask the beta-alanine dose,science_research.xlsx
+Tyrosine,Caffeine,Excess when stacked in cognitive blends,science_research.xlsx
+Rhodiola Rosea,Caffeine,Combination with high-caffeine stimulants,science_research.xlsx
+Shilajit,Horse Gram,Should not be mixed with certain Ayurvedic foods including horse gram,science_research.xlsx

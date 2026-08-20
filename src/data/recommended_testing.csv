@@ -1,0 +1,102 @@
+ingredient,recommended_testing,requires_brcgs_tier
+Cordyceps,BRCGS/GFSI‑certified facility with full GMP; species‑specific ID (DNA + chemical markers),True
+Electrolytes,"BRCGS/GFSI‑certified, GMP‑compliant facilities",True
+Omega-3 (DHA),"BRCGS/GFSI‑certified, GMP‑compliant facility",True
+Saw Palmetto,GMP+BRCGS with identity and potency testing.,True
+Cacao Powder,BRCGS/GFSI‑certified + GMP,True
+L-Arginine,GMP + BRCGS manufacturing,True
+Vitamin C,GMP/BRCGS manufacturing,True
+Vitamin D3,BRCGS/GFSI‑certified facility with pharmaceutical‑style GMP,True
+Zinc,BRCGS/GFSI + GMP manufacturing,True
+Iron (Bisglycinate),GMP/BRCGS,True
+MCT Oil,GMP/BRCGS,True
+Lion's Mane,BRCGS/GFSI + GMP,True
+B-Complex,BRCGS/GFSI + GMP,True
+Resveratrol,GMP/BRCGS,True
+Reishi Mushroom,BRCGS/GFSI + GMP,True
+Psyllium Husk,BRCGS/GFSI + GMP,True
+Digestive Enzymes,GMP/BRCGS,True
+Hydrolyzed Collagen,GMP/BRCGS,True
+Glutathione,GMP/BRCGS,True
+Vitamin C (Ester-C),GMP/BRCGS,True
+Tremella Mushroom,GMP/BRCGS,True
+Pumpkin Seed Oil,GMP/BRCGS,True
+Turmeric (Curcumin),GMP/BRCGS,True
+Fish Oil (High EPA),GMP/BRCGS,True
+Spirulina,GMP/BRCGS,True
+Cod Liver Oil,GMP/BRCGS,True
+Krill Oil,GMP/BRCGS,True
+Matcha Powder,GMP/BRCGS,True
+Moringa,BRCGS/GFSI‑certified facility with audited HACC/GMP,True
+Black Seed Oil (Nigella),GMP/BRCGS,True
+Berberine,GMP/BRCGS,True
+Oregano Oil,GMP/BRCGS,True
+Shilajit,GMP/BRCGS,True
+Selenium,GMP/BRCGS,True
+Echinacea,GMP/BRCGS,True
+Quercetin,GMP/BRCGS,True
+Manuka Honey,BRCGS/GFSI + GMP,True
+Lysine,GMP/BRCGS,True
+Creatine Monohydrate,GMP/BRCGS,True
+Vitamin B12,GMP/BRCGS,True
+Whey Protein,BRCGS/GFSI + GMP,True
+Rhodiola Rosea,GMP/BRCGS,True
+HMB,GMP/BRCGS,True
+Inositol,GMP/BRCGS,True
+Ginkgo Biloba,GMP/BRCGS,True
+Rosemary Extract,GMP/BRCGS,True
+Valerian Root,GMP/BRCGS,True
+Ashwagandha (KSM-66),GMP/BRCGS,True
+5-HTP,GMP/BRCGS,True
+Saccharomyces boulardii,GMP/BRCGS,True
+St. John's Wort,"GMP with batch testing for hypericin/hyperforin, heavy metals, and microbial contamination",False
+Evening Primrose Oil,"GMP with peroxide value, fatty-acid profile, and heavy-metal testing",False
+Magnesium Glycinate,BRCGS/GFSI‑certified facilities with full GMP,True
+Magnesium Malate,BRCGS/GFSI + GMP,True
+Magnesium Citrate,BRCGS/GFSI + GMP,True
+Charcoal (Activated),"GMP with adsorption capacity, heavy metals, and microbial testing",False
+Vitamin E,"GMP with potency assay, oxidation (peroxide value), and heavy-metal testing",False
+MSM,"GMP with purity assay, heavy metals, and microbial testing",False
+Tribulus Terrestris,"GMP with saponin assay, heavy-metal, pesticide, and microbial testing",False
+Prenatal Vitamin,"GMP with nutrient potency verification, heavy-metal (lead) and iodine testing",False
+Hyaluronic Acid (Oral),"molecular-weight verification, microbial limits, and heavy-metal testing",False
+Kelp (Iodine),GMP with iodine assay plus heavy-metal (arsenic) testing,False
+Algal Oil,GMP with DHA/EPA potency verification and oxidation (peroxide/anisidine) testing,False
+Chlorella,"GMP with heavy metals, microcystins, and microbial testing",False
+Flaxseed Oil,GMP with ALA potency verification and oxidation (peroxide/anisidine) testing,False
+Dandelion Root,"GMP with botanical identity, pesticide, and heavy-metal testing",False
+Sea Moss (Irish Moss),BRCGS/FSSC 22000 > ISO 22000 > cGMP > no certification,True
+Potassium,GMP with elemental potassium assay and impurity testing,False
+Copper,GMP with elemental copper assay and heavy-metal impurity testing,False
+Fulvic Acid,"GMP mandatory with heavy-metal, pesticide, and microbial testing",False
+Astaxanthin,GMP mandatory with potency verification and oxidation stability testing,False
+Acetyl-L-Carnitine,"GMP mandatory with purity, identity, and microbial testing",False
+Lactoferrin,"GMP mandatory with protein purity, microbial, and allergen testing",False
+Nutritional Yeast,GMP recommended with vitamin potency verification and microbial testing,False
+Hemp Oil,"GMP mandatory with fatty-acid profiling, oxidation, and THC-free testing",False
+Sea Buckthorn Oil,"GMP mandatory with fatty-acid profile assay, oxidation stability (peroxide/anisidine), and microbial testing",False
+Fenugreek,"GMP mandatory with botanical identity, saponin assay, and heavy-metal/pesticide testing",False
+D-Mannose,"GMP recommended with purity assay, residual sugars, and microbial testing",False
+Green Tea Extract,"GMP mandatory with catechin/EGCG assay, caffeine testing, and contaminant screening",False
+Soy Isolate Protein,"BRCGS or GMP mandatory with protein content verification, amino-acid profiling, and contaminant testing",True
+Elderberry (Sambucus),"GMP mandatory with botanical identity, anthocyanin assay, and microbial testing",False
+Beta-Alanine,"GMP mandatory with purity, identity, and contaminant testing",False
+MCT C8 Oil,GMP mandatory with fatty-acid profile verification and oxidation (peroxide) testing,False
+Tyrosine,"GMP mandatory with purity, identity, and contaminant testing",False
+Nicotinamide,GMP mandatory with vitamin potency verification and contaminant testing,False
+Milk Thistle (Silymarin),"GMP mandatory with botanical identity, silymarin assay, pesticide, and heavy-metal testing",False
+Chlorophyll,"GMP mandatory with identity testing, copper content verification, and heavy-metal screening",False
+Curcumin (Longvida),"GMP mandatory with potency, bioavailability verification, and contaminant testing",False
+Lutein/Zeaxanthin,"GMP mandatory with carotenoid potency, oxidation testing, and contaminant screening",False
+Lavender Oil (Oral),"GMP mandatory with identity testing, linalool/linalyl acetate assay, and microbial screening",False
+Bifidobacterium lactis,"GMP mandatory with CFU verification at expiry, strain identity, and microbial contaminants",False
+Aloe Vera Juice,"GMP mandatory with aloin quantification, microbial testing, and pesticide screening",False
+Chondroitin Sulfate,"GMP mandatory with identity testing, sulfate content assay, and contaminant screening",False
+Fennel Seed,"GMP mandatory with botanical identity, volatile-oil assay, pesticide, and microbial testing",False
+Ceramides,"GMP mandatory with lipid profile verification, allergen testing, and oxidation screening",False
+Maca Root,"GMP mandatory with botanical identity, heavy-metal, and microbial testing",False
+Glucosamine Sulfate,"GMP mandatory with identity, sulfate content, and contaminant testing",False
+Royal Jelly,"GMP mandatory with authenticity testing (10-HDA), microbial screening, and allergen control",False
+Collagen Type II,"GMP mandatory with protein identity, source verification, and contaminant testing",False
+Green Lipped Mussel,"GMP mandatory with lipid profile, oxidation (peroxide value), and allergen testing",False
+Grapefruit Seed Extract,"GMP mandatory with full contaminant screening for synthetic preservatives, plus identity testing",False

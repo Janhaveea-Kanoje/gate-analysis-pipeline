@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Code Nutrition{% endblock %} — Automated Verification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-row">
+        <a href="/" class="brand">
+            <div class="brand-icon">⚗️</div>
+            <div>
+                <div class="brand-name">Code Nutrition</div>
+                <div class="brand-tagline">Automated Verification</div>
+            </div>
+        </a>
+        <nav class="nav-links">
+            <a href="/" class="{{ 'active' if active == 'home' else '' }}">Home</a>
+            <a href="/try-a-product" class="{{ 'active' if active == 'try' else '' }}">Try a Product</a>
+            <a href="/accuracy" class="{{ 'active' if active == 'accuracy' else '' }}">Accuracy &amp; Validation</a>
+            <a href="/methodology" class="{{ 'active' if active == 'methodology' else '' }}">Methodology</a>
+        </nav>
+        <a href="/try-a-product" class="header-cta">Try a Product</a>
+    </div>
+</header>
+
+<main class="container" style="padding-top:2rem; padding-bottom:3rem;">
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    Code Nutrition — an automated implementation of a 5-gate supplement verification framework, built and evaluated as an MSc dissertation project.
+</footer>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

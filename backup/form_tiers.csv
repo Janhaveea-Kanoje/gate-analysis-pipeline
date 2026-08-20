@@ -1,0 +1,19 @@
+ingredient,form,tier,bioavailability_note,use_case,source
+Magnesium,Bisglycinate,Superior,~80% bioavailability; well tolerated,sleep;general,Coudray et al. 2005 Magnesium Research
+Magnesium,Glycinate,Superior,High bioavailability; calming/GABA-adjacent,sleep,Abbasi et al. 2012 J Res Med Sci
+Magnesium,Citrate,Superior,Osmotic effect; good absorption,digestion,Walker et al. 2003 J Am Coll Nutr
+Magnesium,L-Threonate,Superior,Crosses blood-brain barrier,brain,Slutsky et al. 2010 Neuron
+Magnesium,Malate,Acceptable,Used in athletic/energy contexts,athletic,n/a - use case specific
+Magnesium,Oxide,Reject,~4% bioavailability,none,Firoz & Graber 2001 Magnes Res
+Magnesium,Carbonate,Reject,Low bioavailability,none,n/a
+Magnesium,Sulfate,Reject,Low oral bioavailability; laxative effect,none,n/a
+Vitamin D,Cholecalciferol (D3),Superior,Preferred form; raises serum 25(OH)D more effectively than D2,general;bone,NIH ODS Vitamin D Fact Sheet
+Vitamin D,Ergocalciferol (D2),Acceptable,Less potent than D3 but usable,vegan,NIH ODS Vitamin D Fact Sheet
+Omega-3,Triglyceride (natural/re-esterified TG),Superior,~124% relative bioavailability vs ethyl ester,brain;general,industry re-esterification studies
+Omega-3,Ethyl Ester,Acceptable,~73% relative bioavailability,general,n/a
+Curcumin,BCM-95 / Meriva / + Bioperine,Superior,Piperine or lipid formulation needed for absorption,inflammation,multiple RCTs - see evidence file
+Curcumin,Plain Curcumin (no piperine/lipid),Reject,Very poor oral bioavailability without an absorption enhancer,none,n/a
+Iron,Bisglycinate,Superior,Better GI tolerance than sulfate,anemia,n/a
+Iron,Sulfate,Acceptable,Standard form; higher GI side effects,anemia,n/a
+Zinc,Picolinate,Superior,High bioavailability,immunity,n/a
+Zinc,Oxide,Reject,Poor bioavailability,none,n/a
