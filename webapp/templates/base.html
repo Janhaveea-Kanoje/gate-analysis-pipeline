@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Code Nutrition{% endblock %} — Automated Verification</title>
+    <title>{% block title %}Gate Analysis{% endblock %} — Automated Verification</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
@@ -11,9 +11,15 @@
 <header class="site-header">
     <div class="header-row">
         <a href="/" class="brand">
-            <div class="brand-icon">⚗️</div>
+            <div class="brand-icon">
+                <svg viewBox="0 0 40 40" width="24" height="24" fill="none">
+                    <path d="M8 26 A12 12 0 0 1 32 26" stroke="#BF9A2E" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M12 26 A8 8 0 0 1 28 26" stroke="#BF9A2E" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+                    <path d="M16 26 A4 4 0 0 1 24 26" stroke="#BF9A2E" stroke-width="2.5" stroke-linecap="round" opacity="0.45"/>
+                </svg>
+            </div>
             <div>
-                <div class="brand-name">Code Nutrition</div>
+                <div class="brand-name">Gate Analysis</div>
                 <div class="brand-tagline">Automated Verification</div>
             </div>
         </a>
@@ -32,7 +38,7 @@
 </main>
 
 <footer>
-    Code Nutrition — an automated implementation of a 5-gate supplement verification framework, built and evaluated as an MSc dissertation project.
+    Gate Analysis — an automated implementation of a 5-gate supplement verification framework, built and evaluated as an MSc dissertation project.
 </footer>
 
 {% block scripts %}{% endblock %}

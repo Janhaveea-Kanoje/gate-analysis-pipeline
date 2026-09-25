@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% block title %}Accuracy & Validation{% endblock %}
+{% block content %}
+
+<div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">The evidence</div></div>
+<h1 style="font-size:2.2rem;">Accuracy &amp; validation</h1>
+<p style="color:#4A4740; max-width:640px;">Every number here comes from comparing the automated pipeline against manually-reviewed real products — not a single one is estimated or assumed.</p>
+
+<div class="card-box" style="border-left:4px solid var(--gold);">
+    <strong>Why kappa, not just percentage agreement?</strong> A raw agreement percentage can look strong purely by chance — if 9 out of 10 real products should PASS, a check that blindly guesses PASS every time already "agrees" 90% of the time without checking anything. Cohen's kappa corrects for this by measuring agreement beyond what chance alone would produce. Every result below reports both, and a majority-class baseline is given wherever it changes how a result should be read.
+</div>
+
+<hr class="divider">
+<div class="jump-nav">
+    <span class="jump-nav-label">Jump to</span>
+    <a href="#summary">Overall summary</a>
+    <a href="#gate0">Gate 0</a>
+    <a href="#gate1">Gate 1</a>
+    <a href="#gate3">Gate 3</a>
+    <a href="#gate4">Gate 4</a>
+    <a href="#magnesium">Magnesium finding</a>
+    <a href="#limitations">Limitations</a>
+</div>
+<h3 id="sample-sizes">Sample sizes behind each result</h3>
+<table>
+    <tr><th>Gate / check</th><th>Products compared</th></tr>
+    <tr><td>Gate 0 (Form + Dose + Transparency)</td><td>648</td></tr>
+    <tr><td>Gate 1 (Novel Food)</td><td>766</td></tr>
+    <tr><td>Gate 3 (Regulatory History)</td><td>280</td></tr>
+    <tr><td>Gate 3 (Full Disclosure)</td><td>281</td></tr>
+    <tr><td>Gate 4 (Form + Dose)</td><td>145</td></tr>
+</table>
+<p style="font-size:0.85rem; color:var(--muted);">Total: ~3,100 usable ground-truth rows across all gates, ~2,300 individual comparisons once every sub-check is counted. Ground truth was produced by independent double-labelling — the researcher and a research-team collaborator each applied the same criteria separately, then reconciled disagreements to a final consensus.</p>
+
+<hr class="divider">
+<h3 id="summary">Cross-gate summary</h3>
+<table>
+    <tr><th>Gate</th><th>n</th><th>Agreement</th><th>Kappa</th><th>Band</th></tr>
+    <tr><td>Gate 0 — Form + Dose + Transparency</td><td>648</td><td>70.7%</td><td>0.352</td><td style="color:var(--conditional-text);">Fair</td></tr>
+    <tr><td>Gate 1 — Novel Food</td><td>766</td><td>96.5%</td><td><strong>0.412</strong></td><td style="color:var(--pass-text);">Moderate — strongest result</td></tr>
+    <tr><td>Gate 2 — Quality</td><td>—</td><td>—</td><td>—</td><td style="color:var(--muted);">Not evaluated — no open dataset exists</td></tr>
+    <tr><td>Gate 3 — Regulatory History</td><td>280</td><td>91.4%</td><td>-0.033</td><td style="color:var(--fail-text);">Below chance (class imbalance)</td></tr>
+    <tr><td>Gate 3 — Full Disclosure</td><td>281</td><td>93.2%</td><td>-0.013</td><td style="color:var(--fail-text);">Below chance (class imbalance)</td></tr>
+    <tr><td>Gate 4 — Form + Dose</td><td>145</td><td>75.9%</td><td>0.153</td><td style="color:var(--conditional-text);">Slight</td></tr>
+</table>
+<p style="font-size:0.85rem; color:var(--muted);">The single clearest pattern here: the gate needing no AI reading step at all (Gate 1, a live database lookup) scored highest. Every gate depending on an LLM reading unstructured text scored lower — including after multiple rounds of fixing the reading step.</p>
+
+<hr class="divider">
+<h3 id="gate0">Gate 0 — the full correction story</h3>
+<p style="color:#4A4740;">Six real iterations, including a genuine bug found and fixed during this project's own validation work — not a smooth, first-try result.</p>
+<div id="gate0-chart" style="height:400px;"></div>
+<table style="margin-top:1rem;">
+    <tr><th>Iteration</th><th>Agreement</th><th>Kappa</th></tr>
+    <tr><td>1. Regex extraction, before unit-fix</td><td>55.0%</td><td>0.091</td></tr>
+    <tr><td>2. Regex extraction, after unit-fix</td><td>61.4%</td><td>0.168</td></tr>
+    <tr><td>3. LLM extraction, dosage only</td><td>65.4%</td><td>0.242</td></tr>
+    <tr><td>4. LLM extraction, Form + Dose combined (initial)</td><td>67.5%</td><td>0.297</td></tr>
+    <tr><td>5. Bug found &amp; fixed (null-handling defect)</td><td>70.7%</td><td>0.345</td></tr>
+    <tr><td>6. + Transparency (proprietary-blend detection) — final</td><td>70.7%</td><td><strong>0.352</strong></td></tr>
+</table>
+<p style="font-size:0.85rem; color:var(--muted);">Step 5 exists because a real defect was found: a bare truthiness check silently treated a missing evidence match as "passing" rather than excluding it — a Python quirk where a missing value evaluates as true in a boolean context. Fixing it raised the result rather than lowering it, and is documented rather than quietly absorbed into a single final number.</p>
+
+<hr class="divider">
+<h3 id="gate1">Gate 1 — the full improvement story</h3>
+<p style="color:#4A4740;">This gate went through five real iterations before reaching its final result. Nothing here is a first-try number.</p>
+<div id="gate1-chart" style="height:400px;"></div>
+<table style="margin-top:1rem;">
+    <tr><th>Iteration</th><th>Kappa</th></tr>
+    <tr><td>1. Wrong API endpoint</td><td>—</td></tr>
+    <tr><td>2. Fixed endpoint, wrong JSON parsing</td><td>—</td></tr>
+    <tr><td>3. Category-level matching</td><td>0.001</td></tr>
+    <tr><td>4. Product-level (reversed) matching</td><td>-0.017</td></tr>
+    <tr><td>5. Hybrid — final</td><td>0.412</td></tr>
+</table>
+
+<hr class="divider">
+<h3 id="gate3">Gate 3 — why both sub-checks score below chance</h3>
+<p style="color:#4A4740;">Gate 3 has two live checks — Regulatory History (FSA Food Alerts) and Full Disclosure (UK Companies House) — and both post a negative kappa despite agreement over 90%. This isn't a bug; it's what happens when a ground truth is heavily skewed toward one answer.</p>
+<div class="form-grid">
+    <div class="card-box">
+        <strong>Regulatory History</strong>
+        <p style="font-size:0.9rem; margin:0.5rem 0;">91.4% agreement, κ = -0.033 (n=280)</p>
+        <p style="font-size:0.85rem; color:var(--muted);">Checks brand-level FSA alerts, not product-level — and doesn't cover ASA advertising-claim rulings, a real scope gap in what "regulatory history" actually means.</p>
+    </div>
+    <div class="card-box">
+        <strong>Full Disclosure</strong>
+        <p style="font-size:0.9rem; margin:0.5rem 0;">93.2% agreement, κ = -0.013 (n=281)</p>
+        <p style="font-size:0.85rem; color:var(--muted);">Only verifies the company exists on Companies House — the framework's actual "Full Disclosure" requirement is broader than company existence alone.</p>
+    </div>
+</div>
+<p style="font-size:0.85rem; color:var(--muted);">In both cases, the manual ground truth is 91-98% one answer. A check that always guessed the majority answer would already score close to these percentages without checking anything — which is exactly why kappa, not agreement alone, is the number that matters here.</p>
+
+<hr class="divider">
+<h3 id="gate4">Gate 4 — before and after fixing extraction</h3>
+<div id="gate4-chart" style="height:380px;"></div>
+<div class="card-box" style="border-left:4px solid var(--gold); margin-top:1rem;">
+    Notice the majority-class baseline (88.4%) beats the raw agreement of both real versions. This is exactly
+    why kappa is reported everywhere in this project — a high percentage next to a low kappa means the check
+    isn't actually adding much insight over just guessing the common answer.
+</div>
+<p style="font-size:0.85rem; color:var(--muted); margin-top:0.8rem;">A second correction applied here too: the same null-handling defect found in Gate 0 was also present in Gate 4's validation script. Fixing it raised the reported result from 67.5%/κ=0.108 to 75.9%/κ=0.153 (n=145) — the figure shown above is the corrected one.</p>
+
+<hr class="divider">
+<h3 id="magnesium">A real, unplanned finding: the magnesium market</h3>
+<p style="color:#4A4740;">Pulled directly from real market data during Gate 0's validation work — not something this project set out to find.</p>
+<div id="magnesium-chart" style="height:380px;"></div>
+<p style="font-size:0.85rem; color:var(--muted);">Magnesium oxide — the form Gate 0 rejects outright on bioavailability grounds — is both the most heavily blended (88% of products combine it with at least one other form) and the most aggressively dosed (median 320mg) of the five forms studied. Magnesium L-Threonate, a costlier, better-absorbed form, is dosed lowest (144mg) and blended least (21%). Cheaper, lower-bioavailability forms pushed harder; costlier, better forms sold conservatively — a pattern this project didn't go looking for.</p>
+
+<hr class="divider">
+<h3 id="limitations">What each gate's remaining errors are actually caused by</h3>
+<table>
+    <tr><th>Gate</th><th>Main cause of remaining disagreement</th></tr>
+    <tr><td>Gate 0</td><td>Comparing 3 parameters (Form, Dose, Transparency) against a 5-parameter manual decision</td></tr>
+    <tr><td>Gate 1</td><td>Species/strain-specific cases not stated in a product's name (Cordyceps, Krill Oil, etc.)</td></tr>
+    <tr><td>Gate 3 (Reg. History)</td><td>Checks brand-level, not product-level; doesn't cover advertising-claim rulings</td></tr>
+    <tr><td>Gate 3 (Disclosure)</td><td>Only checks company existence, not the full compound "Full Disclosure" criterion</td></tr>
+    <tr><td>Gate 4</td><td>Tests a safety-threshold proxy, not the framework's actual cited-study-match requirement</td></tr>
+</table>
+
+<hr class="divider">
+<h3 id="not-tested">Built and demonstrated, not yet accuracy-tested</h3>
+<p style="color:#4A4740; max-width:720px;">Two real capabilities exist in the pipeline with no ground-truth column to test them against, so they're reported honestly as demonstrated rather than validated: <strong>Formulation Logic</strong> (Gate 0's multi-ingredient contraindication check — proven on a real Copper+Zinc case) and <strong>drug-interaction checking</strong> (Gate 4's Population Safety check against 334 real DDInter records — proven on a real Magnesium Citrate + Dolutegravir case). Both are live, working code; neither has a number above because no manually-labelled data exists to measure them against.</p>
+
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script>
+const goldColor = "#BF9A2E";
+const darkColor = "#171D24";
+
+Plotly.newPlot('gate0-chart', [{
+    x: ["1. Regex,\npre-fix", "2. Regex,\npost-fix", "3. LLM,\ndose only", "4. LLM,\nForm+Dose", "5. Bug\nfixed", "6. +Transparency\n(final)"],
+    y: [0.091, 0.168, 0.242, 0.297, 0.345, 0.352],
+    type: 'scatter', mode: 'lines+markers',
+    line: {color: goldColor, width: 3}, marker: {size: 9, color: goldColor},
+}], {
+    title: "Gate 0: Cohen's kappa across six real iterations",
+    font: {family: "Inter, sans-serif"},
+    paper_bgcolor: "white", plot_bgcolor: "white",
+    yaxis: {title: "Cohen's kappa"},
+}, {responsive: true});
+
+Plotly.newPlot('gate1-chart', [{
+    x: ["3. Category-level", "4. Product-level (reversed)", "5. Hybrid — final"],
+    y: [0.001, -0.017, 0.412],
+    type: 'scatter', mode: 'lines+markers',
+    line: {color: goldColor, width: 3}, marker: {size: 10, color: goldColor},
+}], {
+    title: "Gate 1: Cohen's kappa across iterations (first two failed outright — 0 successful API calls)",
+    font: {family: "Inter, sans-serif"},
+    paper_bgcolor: "white", plot_bgcolor: "white",
+    yaxis: {title: "Cohen's kappa"},
+}, {responsive: true});
+
+Plotly.newPlot('gate4-chart', [{
+    x: ["Majority-class baseline\n(always guess PASS)", "Before extraction fix", "After extraction fix\n(corrected)"],
+    y: [0.000, 0.069, 0.153],
+    type: 'bar', marker: {color: darkColor},
+}], {
+    title: "Gate 4: kappa improved even though raw agreement dropped",
+    font: {family: "Inter, sans-serif"},
+    paper_bgcolor: "white", plot_bgcolor: "white",
+    yaxis: {title: "Cohen's kappa"},
+}, {responsive: true});
+
+Plotly.newPlot('magnesium-chart', [
+    {x: ["Oxide", "Glycinate", "Bisglycinate", "Citrate", "L-Threonate"], y: [320, 350, 200, 218, 144],
+     type: 'bar', name: 'Median dose (mg)', marker: {color: darkColor}, yaxis: 'y'},
+    {x: ["Oxide", "Glycinate", "Bisglycinate", "Citrate", "L-Threonate"], y: [88, 73, 64, 42, 21],
+     type: 'scatter', mode: 'lines+markers', name: 'Blended with another form (%)',
+     line: {color: goldColor, width: 3}, marker: {size: 9, color: goldColor}, yaxis: 'y2'}
+], {
+    title: "Cheaper, lower-bioavailability forms: dosed higher, blended more",
+    font: {family: "Inter, sans-serif"},
+    paper_bgcolor: "white", plot_bgcolor: "white",
+    yaxis: {title: "Median dose (mg)"},
+    yaxis2: {title: "Blend rate (%)", overlaying: 'y', side: 'right', range: [0,100]},
+    legend: {orientation: 'h', y: -0.2},
+}, {responsive: true});
+</script>
+{% endblock %}

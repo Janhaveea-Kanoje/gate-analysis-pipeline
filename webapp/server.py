@@ -1,5 +1,5 @@
 """
-Flask backend for the Code Nutrition web app.
+Flask backend for the Gate Analysis web app.
 
 Reuses the existing pipeline code exactly as-is (src.pipeline.run_pipeline,
 all five gate modules, src.schemas) - nothing about the actual verification

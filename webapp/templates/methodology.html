@@ -5,7 +5,17 @@
 <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Methodology</div></div>
 <h1 style="font-size:2.2rem;">How this actually works</h1>
 
-<h3>The core design rule: AI reads, rules decide</h3>
+<div class="jump-nav">
+    <span class="jump-nav-label">Jump to</span>
+    <a href="#design-rule">Core design rule</a>
+    <a href="#evidence-sources">Evidence sources</a>
+    <a href="#headline">Headline finding</a>
+    <a href="#verdicts">Verdict states</a>
+    <a href="#ground-truth">Ground truth</a>
+    <a href="#limitations">What it doesn't claim</a>
+</div>
+
+<h3 id="design-rule">The core design rule: AI reads, rules decide</h3>
 <p style="color:#4A4740;">
 Every gate in this pipeline follows one strict rule: a large language model is only ever
 allowed to <strong>read messy text and turn it into structured data</strong> (e.g. "what form and dose
@@ -20,7 +30,7 @@ explicit, checkable threshold, not a model's best guess.
 </p>
 
 <hr class="divider">
-<h3>Where each gate gets its evidence</h3>
+<h3 id="evidence-sources">Where each gate gets its evidence</h3>
 <table>
     <tr><th>Gate</th><th>Source</th></tr>
     <tr><td>Gate 0 — Formulation</td><td>A 101-ingredient evidence file (forms, safe dose ranges) built from the research team's data</td></tr>
@@ -31,7 +41,7 @@ explicit, checkable threshold, not a model's best guess.
 </table>
 
 <hr class="divider">
-<h3>The headline finding</h3>
+<h3 id="headline">The headline finding</h3>
 <div class="card-box" style="border-left:4px solid var(--gold);">
     Across every gate tested, the <strong>plain database lookup</strong> (Gate 1) outperformed every
     <strong>AI-assisted text-reading</strong> approach (Gates 0 and 4) — even after multiple rounds of
@@ -42,7 +52,7 @@ explicit, checkable threshold, not a model's best guess.
 
 <hr class="divider">
 <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Section 01 · Outcomes</div></div>
-<h3>Verdict states</h3>
+<h3 id="verdicts">Verdict states</h3>
 <p style="color:#4A4740;">A product clearing all five gates receives one of three tiers — never a numeric score, and never partial credit for a gate it didn't clear.</p>
 <div class="gate-grid">
     <div class="gate-card" style="border-top-color:var(--pass-text);">
@@ -65,7 +75,7 @@ explicit, checkable threshold, not a model's best guess.
 
 <hr class="divider">
 <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Section 02 · The corpus</div></div>
-<h3>How the ground truth was built</h3>
+<h3 id="ground-truth">How the ground truth was built</h3>
 <div class="step-card"><div class="step-number">01</div><div class="step-title">Manual review</div><div class="step-desc">A single researcher applied the same five-gate criteria this pipeline now applies automatically, to roughly 1,850 real UK products — before any of this automation existed.</div></div>
 <div class="step-card"><div class="step-number">02</div><div class="step-title">Evidence base</div><div class="step-desc">Forms and safe-dose ranges for 101 ingredients were compiled from the research team's clinical evidence sources.</div></div>
 <div class="step-card"><div class="step-number">03</div><div class="step-title">Extraction</div><div class="step-desc">A large language model reads each product's free-text label and turns it into structured form and dose data — it never decides pass or fail.</div></div>
@@ -83,7 +93,7 @@ treating the current ground truth as beyond question.
 
 <hr class="divider">
 <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Section 03 · Honesty</div></div>
-<h3>What this pipeline doesn't claim</h3>
+<h3 id="limitations">What this pipeline doesn't claim</h3>
 <p style="color:#4A4740;">This automated pipeline is a research prototype, evaluated against real data, not a certified consumer product. Stated plainly:</p>
 <ul style="color:#4A4740;">
     <li><strong>It is not a medical endorsement, and not a guarantee of individual safety</strong> for any person or product.</li>

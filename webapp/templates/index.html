@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<div class="hero-grid">
+    <div>
+        <div class="eyebrow">
+            <div class="eyebrow-line"></div>
+            <div class="eyebrow-text">Automated pipeline · MSc dissertation project</div>
+        </div>
+        <h1>The automated gate<br>for supplement verification.</h1>
+        <p style="max-width:560px; font-size:1.1rem; color:#4A4740;">
+            Five independent gates — formulation quality, UK regulatory status, lab-quality verification,
+            brand integrity, and medical appropriateness — checked using real evidence data and live
+            government APIs, evaluated against manually-reviewed real products.
+        </p>
+    </div>
+    <div class="hero-visual">
+        <svg viewBox="0 0 400 400" width="100%" height="100%">
+            <circle cx="200" cy="200" r="170" fill="none" stroke="#DDD8C6" stroke-width="1.5"/>
+            <path d="M60 200 A140 140 0 0 1 340 200" stroke="#171D24" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M90 200 A110 110 0 0 1 310 200" stroke="#BF9A2E" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M120 200 A80 80 0 0 1 280 200" stroke="#171D24" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.55"/>
+            <path d="M150 200 A50 50 0 0 1 250 200" stroke="#BF9A2E" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.55"/>
+            <circle cx="200" cy="200" r="14" fill="#171D24"/>
+            <text x="200" y="330" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#6B6858" letter-spacing="2">FIVE SEQUENTIAL GATES</text>
+        </svg>
+    </div>
+</div>
+
+<div class="stat-bar">
+    <div class="stat-cell">
+        <div class="stat-value" data-count-final="5/5" data-count-to="5">0/5</div>
+        <div class="stat-label">Gates built</div>
+    </div>
+    <div class="stat-cell">
+        <div class="stat-value" data-count-final="4/5" data-count-to="4">0/5</div>
+        <div class="stat-label">Empirically validated</div>
+    </div>
+    <div class="stat-cell">
+        <div class="stat-value" data-count-final="~3,100" data-count-to="3100" data-count-prefix="~">0</div>
+        <div class="stat-label">Ground-truth products checked</div>
+    </div>
+    <div class="stat-cell">
+        <div class="stat-value" data-count-final="101" data-count-to="101">0</div>
+        <div class="stat-label">Ingredients in evidence base</div>
+    </div>
+</div>
+
+<div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">The framework</div></div>
+<h2>The five gates.</h2>
+<p style="max-width:700px; color:#4A4740;">Sequential. A product that fails one gate is not assessed against the next — there is no overall score and no partial credit.</p>
+
+<div class="gate-grid">
+    <div class="gate-card">
+        <div class="gate-label">Gate 0</div>
+        <div class="gate-name">Formulation</div>
+        <div class="gate-question">Is the ingredient form and dose backed by real evidence?</div>
+        <div class="gate-detail">Checked against a 101-ingredient evidence file (forms, safe dose ranges).</div>
+        <div class="gate-status" style="color:var(--pass-text);">Validated — κ = 0.297, 68% agreement (n=806)</div>
+    </div>
+    <div class="gate-card">
+        <div class="gate-label">Gate 1</div>
+        <div class="gate-name">Regulatory</div>
+        <div class="gate-question">Is it legal to sell in the UK today?</div>
+        <div class="gate-detail">Checked live against the UK FSA Novel Food register.</div>
+        <div class="gate-status" style="color:var(--pass-text);">Validated — κ = 0.412, 96.5% agreement (n=766) — strongest result</div>
+    </div>
+    <div class="gate-card">
+        <div class="gate-label">Gate 2</div>
+        <div class="gate-name">Quality</div>
+        <div class="gate-question">Does independent lab testing confirm the label claims?</div>
+        <div class="gate-detail">No open dataset of batch-specific lab certificates exists.</div>
+        <div class="gate-status" style="color:var(--conditional-text);">Built, not empirically validated — no public data exists</div>
+    </div>
+    <div class="gate-card">
+        <div class="gate-label">Gate 3</div>
+        <div class="gate-name">Brand Integrity</div>
+        <div class="gate-question">Is the company real, clean of recent alerts?</div>
+        <div class="gate-detail">Checked live against UK Companies House and FSA Food Alerts.</div>
+        <div class="gate-status" style="color:var(--conditional-text);">Validated — 91-93% agreement, weak κ (class imbalance)</div>
+    </div>
+    <div class="gate-card">
+        <div class="gate-label">Gate 4</div>
+        <div class="gate-name">Medical</div>
+        <div class="gate-question">Does the dose match what clinical studies used?</div>
+        <div class="gate-detail">Uses a safety-threshold proxy — the real cited-study database doesn't exist yet.</div>
+        <div class="gate-status" style="color:var(--conditional-text);">Validated — κ = 0.108, known scope limitation</div>
+    </div>
+</div>
+
+<div class="pull-quote">
+    A plain database lookup outperformed every AI-assisted reading approach we tested — even after
+    several rounds of fixing the reading step. Where a question can be answered by checking a real
+    database directly, that beat asking a model to read and decide, every time.
+</div>
+
+<div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Real findings</div></div>
+<h2>What the evidence actually shows.</h2>
+<div class="finding-grid">
+    <div class="finding-card">
+        <div class="finding-title">Lookup &gt; LLM</div>
+        <div class="finding-text">The gate needing no AI reading step (Gate 1, live database lookup) scored highest. Every AI-assisted extraction gate scored lower, even after multiple rounds of fixes.</div>
+    </div>
+    <div class="finding-card">
+        <div class="finding-title">Cheap forms, pushed harder</div>
+        <div class="finding-text">Magnesium oxide (the rejected form) was dosed highest and blended most across the real market data pulled for this project. Premium forms were dosed conservatively and sold with less blending.</div>
+    </div>
+</div>
+
+{% endblock %}
+{% block scripts %}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll("[data-count-to]");
+    const duration = 1100;
+
+    counters.forEach(el => {
+        const target = parseInt(el.dataset.countTo, 10);
+        const finalText = el.dataset.countFinal;
+        const prefix = el.dataset.countPrefix || "";
+        const suffix = finalText.includes("/") ? "/" + finalText.split("/")[1] : "";
+        const startTime = performance.now();
+
+        function frame(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // ease-out for a natural deceleration, not a linear count
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(target * eased);
+            el.textContent = prefix + current.toLocaleString("en-GB") + suffix;
+            if (progress < 1) {
+                requestAnimationFrame(frame);
+            } else {
+                el.textContent = finalText;  // exact final value, no rounding drift
+            }
+        }
+        requestAnimationFrame(frame);
+    });
+});
+</script>
+{% endblock %}
