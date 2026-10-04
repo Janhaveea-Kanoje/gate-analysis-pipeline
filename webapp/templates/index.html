@@ -35,11 +35,11 @@
     </div>
     <div class="stat-cell">
         <div class="stat-value" data-count-final="4/5" data-count-to="4">0/5</div>
-        <div class="stat-label">Empirically validated</div>
+        <div class="stat-label">Gates with empirical results</div>
     </div>
     <div class="stat-cell">
         <div class="stat-value" data-count-final="~3,100" data-count-to="3100" data-count-prefix="~">0</div>
-        <div class="stat-label">Ground-truth products checked</div>
+        <div class="stat-label">Ground-truth rows (four gate sheets)</div>
     </div>
     <div class="stat-cell">
         <div class="stat-value" data-count-final="101" data-count-to="101">0</div>
@@ -57,14 +57,14 @@
         <div class="gate-name">Formulation</div>
         <div class="gate-question">Is the ingredient form and dose backed by real evidence?</div>
         <div class="gate-detail">Checked against a 101-ingredient evidence file (forms, safe dose ranges).</div>
-        <div class="gate-status" style="color:var(--pass-text);">Validated — κ = 0.297, 68% agreement (n=806)</div>
+        <div class="gate-status" style="color:var(--conditional-text);">Partially validated (3 of 5 parameters) — κ = 0.352, 70.7% agreement (n=648)</div>
     </div>
     <div class="gate-card">
         <div class="gate-label">Gate 1</div>
         <div class="gate-name">Regulatory</div>
         <div class="gate-question">Is it legal to sell in the UK today?</div>
         <div class="gate-detail">Checked live against the UK FSA Novel Food register.</div>
-        <div class="gate-status" style="color:var(--pass-text);">Validated — κ = 0.412, 96.5% agreement (n=766) — strongest result</div>
+        <div class="gate-status" style="color:var(--pass-text);">Validated (Novel Food check) — κ = 0.412, 96.5% agreement (n=766) — strongest result</div>
     </div>
     <div class="gate-card">
         <div class="gate-label">Gate 2</div>
@@ -78,21 +78,21 @@
         <div class="gate-name">Brand Integrity</div>
         <div class="gate-question">Is the company real, clean of recent alerts?</div>
         <div class="gate-detail">Checked live against UK Companies House and FSA Food Alerts.</div>
-        <div class="gate-status" style="color:var(--conditional-text);">Validated — 91-93% agreement, weak κ (class imbalance)</div>
+        <div class="gate-status" style="color:var(--conditional-text);">Partially validated (2 of 5 parameters) — 91–93% agreement, but κ below zero (skewed ground truth)</div>
     </div>
     <div class="gate-card">
         <div class="gate-label">Gate 4</div>
         <div class="gate-name">Medical</div>
         <div class="gate-question">Does the dose match what clinical studies used?</div>
         <div class="gate-detail">Uses a safety-threshold proxy — the real cited-study database doesn't exist yet.</div>
-        <div class="gate-status" style="color:var(--conditional-text);">Validated — κ = 0.108, known scope limitation</div>
+        <div class="gate-status" style="color:var(--conditional-text);">Partially validated (dose-threshold proxy) — κ = 0.153, 75.9% agreement (n=145)</div>
     </div>
 </div>
 
 <div class="pull-quote">
-    A plain database lookup outperformed every AI-assisted reading approach we tested — even after
-    several rounds of fixing the reading step. Where a question can be answered by checking a real
-    database directly, that beat asking a model to read and decide, every time.
+    The one gate that needed no AI reading step — a live database lookup — scored highest. The two
+    gates that depend on an LLM reading label text scored lower, even after several rounds of fixing
+    the reading step. So the AI is kept to reading, and every decision comes from a plain rule.
 </div>
 
 <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Real findings</div></div>
@@ -100,11 +100,11 @@
 <div class="finding-grid">
     <div class="finding-card">
         <div class="finding-title">Lookup &gt; LLM</div>
-        <div class="finding-text">The gate needing no AI reading step (Gate 1, live database lookup) scored highest. Every AI-assisted extraction gate scored lower, even after multiple rounds of fixes.</div>
+        <div class="finding-text">Gate 1 (live Novel Food register lookup, no AI reading step) scored highest, κ = 0.412. Gates 0 and 4, which depend on an LLM reading label text, scored lower (κ = 0.352 and 0.153) even after repeated fixes. Gate 3's lookups were limited by data coverage and a skewed ground truth, so they don't test this comparison.</div>
     </div>
     <div class="finding-card">
-        <div class="finding-title">Cheap forms, pushed harder</div>
-        <div class="finding-text">Magnesium oxide (the rejected form) was dosed highest and blended most across the real market data pulled for this project. Premium forms were dosed conservatively and sold with less blending.</div>
+        <div class="finding-title">Low-absorption forms, blended most</div>
+        <div class="finding-text">Magnesium oxide, the form Gate 0 rejects on absorption grounds, was the most heavily blended (88%), and about 48% of oxide products exceeded the 350 mg/day safety limit. L-threonate was dosed lowest and blended least (21%).</div>
     </div>
 </div>
 

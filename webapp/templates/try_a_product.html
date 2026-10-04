@@ -5,6 +5,7 @@
 <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Live pipeline</div></div>
 <h1 style="font-size:2.2rem;">Try a product</h1>
 <p style="color:#4A4740; max-width:640px;">This runs the real pipeline code. Every dropdown filters to real, evidence-backed or ground-truth options for whatever you pick.</p>
+<p style="font-size:0.85rem; color:var(--muted); max-width:640px;">Demo limits: one ingredient at a time, so Gate 0's multi-ingredient conflict check and proprietary-blend (Transparency) check can't be exercised here. Gate 2 only varies the heavy-metal readings; its other lab inputs are fixed hypothetical values.</p>
 
 <div class="card-box">
     <h3>Basic product details</h3>
@@ -55,14 +56,14 @@
     </div>
 
     <details style="margin-top:1rem;">
-        <summary style="cursor:pointer; font-weight:500; padding:0.6rem 0;">Advanced: regulatory, quality &amp; brand details (defaults are a clean, passing example)</summary>
+        <summary style="cursor:pointer; font-weight:500; padding:0.6rem 0;">Advanced: regulatory, quality &amp; brand details (defaults are a clean, passing example; BRCGS is the default certifier because Gate 1 requires it for 55 of the 101 ingredients)</summary>
         <div style="padding-top:1rem;">
             <h3>Gate 1 — Regulatory</h3>
             <div class="form-grid">
                 <div>
                     <label for="gmp-body">GMP certifying body</label>
                     <select id="gmp-body">
-                        <option>NSF</option><option>Informed Sport</option><option>USP</option><option>BRCGS</option><option>None / Unknown</option>
+                        <option selected>BRCGS</option><option>NSF</option><option>Informed Sport</option><option>USP</option><option>None / Unknown</option>
                     </select>
                 </div>
                 <div>

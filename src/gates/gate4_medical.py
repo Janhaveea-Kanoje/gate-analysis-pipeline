@@ -13,7 +13,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from src.schemas import Product, Gate4Result
-from src.gates.gate0_formulation import ExtractedIngredient, _DOSAGE_BANDS, _to_mg
+from src.gates.gate0_formulation import ExtractedIngredient, _DOSAGE_BANDS, _to_mg, check_use_case_match
 from src.datasets.ddinter_client import check_supplement_drug_interactions
 
 
@@ -37,7 +37,7 @@ def check_form_dose_match(inputs: MedicalInputs) -> tuple[bool, str]:
 
     This fallback is a genuine scope mismatch, not a full implementation of
     the parameter, and was confirmed as the primary source of weak
-    validation results (Cohen's kappa = 0.108) during this pipeline's
+    validation results (Cohen's kappa = 0.153) during this pipeline's
     accuracy work: the fallback answers "is this dose in a safe range" not
     "does this dose match what the cited study used", and the two questions
     only sometimes have the same answer. Building a real per-study dose
@@ -96,12 +96,32 @@ def check_interactions(inputs: MedicalInputs) -> tuple[bool, str]:
 
 
 def check_evidence_alignment(inputs: MedicalInputs) -> tuple[bool, str]:
-    if not inputs.claimed_benefit:
+    """
+    Is the claimed benefit supported by the evidence file for at least one
+    ingredient in the product?
+
+    The framework's full definition of this parameter is a comparison against
+    the clinical study a brand cites. No structured database of cited studies
+    exists, so the available proxy is the evidence file's own use_case column
+    (the same source Gate 0's Use Case Match reads - this function reuses that
+    lookup deliberately, so the two gates cannot disagree about what counts as
+    a supported use). Because of that, a product reaching Gate 4 has normally
+    already passed the same lookup in Gate 0; this check is a proxy, not an
+    independent test, and is not part of the validated accuracy figures.
+
+    An earlier version tested whether the claim text appeared inside the
+    ingredient's NAME (e.g. 'immunity' in 'Zinc'), which could not pass for
+    any real claim and was replaced by the lookup below.
+    """
+    claimed = (inputs.claimed_benefit or "").strip()
+    if not claimed or claimed.lower() == "general":
         return True, "No specific benefit claimed."
-    supporting = [ing for ing in inputs.ingredients if inputs.claimed_benefit.lower() in ing.name.lower()]
+    supporting = [ing for ing in inputs.ingredients if check_use_case_match(ing, claimed)[0]]
     if not supporting:
-        return False, f"Claims '{inputs.claimed_benefit}' with no ingredient at an effective dose supporting that specific claim."
-    return True, f"Formulation matches the claimed benefit: {inputs.claimed_benefit}."
+        return False, (f"Claims '{claimed}', but no ingredient's form lists that use in the evidence file "
+                       f"(proxy for cited-study support).")
+    names = ", ".join(ing.name for ing in supporting)
+    return True, f"Claimed benefit '{claimed}' is listed for {names} in the evidence file (proxy for cited-study support)."
 
 
 def check_multi_ingredient(inputs: MedicalInputs) -> tuple[bool, str]:

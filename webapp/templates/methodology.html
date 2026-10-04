@@ -35,7 +35,7 @@ explicit, checkable threshold, not a model's best guess.
     <tr><th>Gate</th><th>Source</th></tr>
     <tr><td>Gate 0 — Formulation</td><td>A 101-ingredient evidence file (forms, safe dose ranges) built from the research team's data</td></tr>
     <tr><td>Gate 1 — Regulatory</td><td>The live UK Food Standards Agency Novel Food register — a real government database, checked in real time</td></tr>
-    <tr><td>Gate 2 — Quality</td><td>No open dataset exists for this yet — the biggest remaining gap, being worked on with a research contact</td></tr>
+    <tr><td>Gate 2 — Quality</td><td>No open dataset of batch-specific lab certificates exists, and the research team's own search found none — the biggest remaining gap. The gate is built and exercised only with hypothetical inputs.</td></tr>
     <tr><td>Gate 3 — Brand Integrity</td><td>Live UK Companies House (company verification) + live FSA Food Alerts (recall history)</td></tr>
     <tr><td>Gate 4 — Medical</td><td>The same evidence file as Gate 0, used as a stand-in for a full clinical-study-dose database that doesn't exist yet</td></tr>
 </table>
@@ -43,29 +43,30 @@ explicit, checkable threshold, not a model's best guess.
 <hr class="divider">
 <h3 id="headline">The headline finding</h3>
 <div class="card-box" style="border-left:4px solid var(--gold);">
-    Across every gate tested, the <strong>plain database lookup</strong> (Gate 1) outperformed every
-    <strong>AI-assisted text-reading</strong> approach (Gates 0 and 4) — even after multiple rounds of
-    fixing the reading step. Where a question can be answered by checking a real database
-    directly, this project's evidence says that beats asking an AI model to read and decide,
-    every time it was tested.
+    The one gate that needed no AI reading step — a <strong>plain database lookup</strong> (Gate 1) —
+    scored highest, ahead of both gates that rely on an <strong>LLM reading label text</strong> (Gates 0
+    and 4), even after multiple rounds of fixing the reading step. Gate 3's lookups were limited by
+    data coverage and a heavily skewed ground truth, so they don't test this comparison. The evidence
+    supports keeping the AI to reading and leaving every decision to a plain rule — not a claim that
+    lookups always win.
 </div>
 
 <hr class="divider">
 <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Section 01 · Outcomes</div></div>
 <h3 id="verdicts">Verdict states</h3>
-<p style="color:#4A4740;">A product clearing all five gates receives one of three tiers — never a numeric score, and never partial credit for a gate it didn't clear.</p>
+<p style="color:#4A4740;">A product clearing all five gates receives a tier — never a numeric score, and never partial credit for a gate it didn't clear. In the current build the outcome is Tier 1 or Tier 3; Tier 2 is part of the design but cannot be reached yet (explained in its card).</p>
 <div class="gate-grid">
     <div class="gate-card" style="border-top-color:var(--pass-text);">
         <span class="pill pill-pass">Tier 1</span>
-        <p style="margin-top:0.8rem; font-size:0.9rem;">All 5 gates pass, using Superior-tier forms at the upper end of the evidence-based dose range, with premium (ISO 17025) testing. Requires expert panel consensus before publication — this pipeline flags it, it does not auto-publish it.</p>
+        <p style="margin-top:0.8rem; font-size:0.9rem;">All 5 gates pass, using a Superior-tier form at the upper end of the evidence-based dose range, with premium (ISO 17025) testing. Requires expert panel consensus before publication — this pipeline flags it, it does not auto-publish it.</p>
     </div>
-    <div class="gate-card" style="border-top-color:var(--pass-text);">
-        <span class="pill pill-pass">Tier 2</span>
-        <p style="margin-top:0.8rem; font-size:0.9rem;">All 5 gates pass, using acceptable (not necessarily Superior) forms or doses outside the upper range.</p>
+    <div class="gate-card" style="border-top-color:var(--muted);">
+        <span class="pill pill-notfound">Tier 2 · not reachable yet</span>
+        <p style="margin-top:0.8rem; font-size:0.9rem;">Designed for a Superior form at the top of the dose range <em>without</em> premium (ISO 17025) testing. In the current build it cannot occur: Gate 2 already requires an ISO 17025 lab to pass, so every product that reaches the tier step has premium testing. Recorded as a known limitation.</p>
     </div>
     <div class="gate-card" style="border-top-color:var(--conditional-text);">
         <span class="pill pill-conditional">Tier 3</span>
-        <p style="margin-top:0.8rem; font-size:0.9rem;">All 5 gates pass, but neither the Superior-form nor upper-dose-range condition is met — a baseline, adequate product.</p>
+        <p style="margin-top:0.8rem; font-size:0.9rem;">All 5 gates pass, but either the form is not Superior or the dose is not at the top of the range — a baseline, adequate product. Every Acceptable-form product that clears all gates lands here.</p>
     </div>
     <div class="gate-card" style="border-top-color:var(--fail-text);">
         <span class="pill pill-fail">Tier 0</span>
@@ -76,7 +77,7 @@ explicit, checkable threshold, not a model's best guess.
 <hr class="divider">
 <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">Section 02 · The corpus</div></div>
 <h3 id="ground-truth">How the ground truth was built</h3>
-<div class="step-card"><div class="step-number">01</div><div class="step-title">Manual review</div><div class="step-desc">A single researcher applied the same five-gate criteria this pipeline now applies automatically, to roughly 1,850 real UK products — before any of this automation existed.</div></div>
+<div class="step-card"><div class="step-number">01</div><div class="step-title">Manual review</div><div class="step-desc">The researcher applied the same five-gate criteria this pipeline now applies automatically to real UK products (1,754 in the Gate 0 sheet, after removing 104 summary rows) — before any of this automation existed. A research-team collaborator then independently re-labelled every product, and the two sets of labels were reconciled to a final consensus.</div></div>
 <div class="step-card"><div class="step-number">02</div><div class="step-title">Evidence base</div><div class="step-desc">Forms and safe-dose ranges for 101 ingredients were compiled from the research team's clinical evidence sources.</div></div>
 <div class="step-card"><div class="step-number">03</div><div class="step-title">Extraction</div><div class="step-desc">A large language model reads each product's free-text label and turns it into structured form and dose data — it never decides pass or fail.</div></div>
 <div class="step-card"><div class="step-number">04</div><div class="step-title">Rule engine</div><div class="step-desc">Fixed, deterministic thresholds compare the extracted data against the evidence base to reach a verdict.</div></div>
@@ -84,11 +85,11 @@ explicit, checkable threshold, not a model's best guess.
 
 <p style="color:#4A4740; margin-top:1rem;">
 This matters for how the accuracy numbers on the previous page should be read: they measure
-agreement with <strong>one reviewer's judgement</strong>, not against an independent panel. The framework's
-own design already requires panel consensus for its highest-confidence tier (Tier 1, above) —
-this dissertation is transparent that its ground truth does not yet meet that same bar, and
-names independent expert-panel labelling as a specific direction for future work rather than
-treating the current ground truth as beyond question.
+agreement with a <strong>consensus label set from two independent reviewers</strong> — stronger than a single
+reviewer, but short of the independent expert panel the framework requires for its highest-confidence
+tier (Tier 1, above). The specific gap: the two reviewers' original, pre-reconciliation labels were not
+kept, so an inter-rater agreement figure (kappa) for the ground truth itself cannot be reported. A fresh
+expert-panel labelling round, with the original labels retained, is named as future work.
 </p>
 
 <hr class="divider">
@@ -99,7 +100,7 @@ treating the current ground truth as beyond question.
     <li><strong>It is not a medical endorsement, and not a guarantee of individual safety</strong> for any person or product.</li>
     <li><strong>Gate 2 has no empirical result.</strong> No open dataset of batch-specific laboratory certificates exists anywhere — this is stated as a data gap, not glossed over as "in progress."</li>
     <li><strong>Gate 4 uses a safety-threshold proxy</strong>, not an implementation of its actual defined requirement (matching a product's dose against the specific clinical study it cites) — that real per-study dose database does not exist yet.</li>
-    <li><strong>Outcomes depend on the evidence available at assessment time.</strong> New evidence, or a corrected evidence-file entry (this project already found and fixed one real contradiction in its own source data), can change a prior result.</li>
+    <li><strong>The evidence file is a strong draft, not a verified source.</strong> Its 101 entries have no machine-extractable citations; key bioavailability claims (magnesium, zinc, curcumin, omega-3, iron) were checked against the literature — several turned out to be contested — but not every row. One form (Prenatal Vitamin) appears as both Acceptable and Reject in the source file and is provisionally treated as Acceptable pending the research team's confirmation. New evidence or a corrected entry can change a prior result.</li>
     <li><strong>Every live API this pipeline depends on</strong> (FSA Novel Food, FSA Food Alerts, UK Companies House) is a third-party government service outside this project's control — several real integration errors were caught and corrected during this work, illustrating that such dependencies need ongoing verification, not a one-time integration effort.</li>
 </ul>
 

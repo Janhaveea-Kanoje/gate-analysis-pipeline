@@ -98,8 +98,8 @@ st.subheader("How each gate performed against real, manually-reviewed data")
 
 results = pd.DataFrame({
     "Gate": ["Gate 0\nFormulation", "Gate 1\nRegulatory", "Gate 3\nRegulatory Hist.", "Gate 3\nDisclosure", "Gate 4\nMedical"],
-    "Agreement (%)": [67.5, 96.5, 91.4, 93.2, 67.5],
-    "Cohen's kappa": [0.297, 0.412, -0.033, -0.013, 0.108],
+    "Agreement (%)": [70.7, 96.5, 91.4, 93.2, 75.9],
+    "Cohen's kappa": [0.352, 0.412, -0.033, -0.013, 0.153],
 })
 
 fig = go.Figure()

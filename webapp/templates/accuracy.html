@@ -4,7 +4,7 @@
 
 <div class="eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-text">The evidence</div></div>
 <h1 style="font-size:2.2rem;">Accuracy &amp; validation</h1>
-<p style="color:#4A4740; max-width:640px;">Every number here comes from comparing the automated pipeline against manually-reviewed real products — not a single one is estimated or assumed.</p>
+<p style="color:#4A4740; max-width:640px;">Every accuracy figure here comes from comparing the automated pipeline against manually-reviewed real products — not a single one is estimated or assumed.</p>
 
 <div class="card-box" style="border-left:4px solid var(--gold);">
     <strong>Why kappa, not just percentage agreement?</strong> A raw agreement percentage can look strong purely by chance — if 9 out of 10 real products should PASS, a check that blindly guesses PASS every time already "agrees" 90% of the time without checking anything. Cohen's kappa corrects for this by measuring agreement beyond what chance alone would produce. Every result below reports both, and a majority-class baseline is given wherever it changes how a result should be read.
@@ -30,20 +30,20 @@
     <tr><td>Gate 3 (Full Disclosure)</td><td>281</td></tr>
     <tr><td>Gate 4 (Form + Dose)</td><td>145</td></tr>
 </table>
-<p style="font-size:0.85rem; color:var(--muted);">Total: ~3,100 usable ground-truth rows across all gates, ~2,300 individual comparisons once every sub-check is counted. Ground truth was produced by independent double-labelling — the researcher and a research-team collaborator each applied the same criteria separately, then reconciled disagreements to a final consensus.</p>
+<p style="font-size:0.85rem; color:var(--muted);">The ground truth holds ~3,100 usable rows across the four gate sheets (rows, not distinct products); ~2,100 of them produced a comparison once every sub-check is counted (648 + 766 + 280 + 281 + 145 = 2,120). Ground truth was produced by independent double-labelling — the researcher and a research-team collaborator each applied the same criteria separately, then reconciled disagreements to a final consensus. The original pre-reconciliation labels were not kept, so an inter-rater kappa for the ground truth itself cannot be reported.</p>
 
 <hr class="divider">
 <h3 id="summary">Cross-gate summary</h3>
 <table>
     <tr><th>Gate</th><th>n</th><th>Agreement</th><th>Kappa</th><th>Band</th></tr>
-    <tr><td>Gate 0 — Form + Dose + Transparency</td><td>648</td><td>70.7%</td><td>0.352</td><td style="color:var(--conditional-text);">Fair</td></tr>
-    <tr><td>Gate 1 — Novel Food</td><td>766</td><td>96.5%</td><td><strong>0.412</strong></td><td style="color:var(--pass-text);">Moderate — strongest result</td></tr>
+    <tr><td>Gate 0 — Form + Dose + Transparency (3 of 5 parameters)</td><td>648</td><td>70.7%</td><td>0.352</td><td style="color:var(--conditional-text);">Fair</td></tr>
+    <tr><td>Gate 1 — Novel Food check</td><td>766</td><td>96.5%</td><td><strong>0.412</strong></td><td style="color:var(--pass-text);">Moderate — strongest result</td></tr>
     <tr><td>Gate 2 — Quality</td><td>—</td><td>—</td><td>—</td><td style="color:var(--muted);">Not evaluated — no open dataset exists</td></tr>
-    <tr><td>Gate 3 — Regulatory History</td><td>280</td><td>91.4%</td><td>-0.033</td><td style="color:var(--fail-text);">Below chance (class imbalance)</td></tr>
-    <tr><td>Gate 3 — Full Disclosure</td><td>281</td><td>93.2%</td><td>-0.013</td><td style="color:var(--fail-text);">Below chance (class imbalance)</td></tr>
-    <tr><td>Gate 4 — Form + Dose</td><td>145</td><td>75.9%</td><td>0.153</td><td style="color:var(--conditional-text);">Slight</td></tr>
+    <tr><td>Gate 3 — Regulatory History (1 of 5 parameters)</td><td>280</td><td>91.4%</td><td>-0.033</td><td style="color:var(--fail-text);">Below chance (class imbalance)</td></tr>
+    <tr><td>Gate 3 — Full Disclosure (1 of 5 parameters)</td><td>281</td><td>93.2%</td><td>-0.013</td><td style="color:var(--fail-text);">Below chance (class imbalance)</td></tr>
+    <tr><td>Gate 4 — Form + Dose (dose-threshold proxy)</td><td>145</td><td>75.9%</td><td>0.153</td><td style="color:var(--conditional-text);">Slight</td></tr>
 </table>
-<p style="font-size:0.85rem; color:var(--muted);">The single clearest pattern here: the gate needing no AI reading step at all (Gate 1, a live database lookup) scored highest. Every gate depending on an LLM reading unstructured text scored lower — including after multiple rounds of fixing the reading step.</p>
+<p style="font-size:0.85rem; color:var(--muted);">The single clearest pattern here: the gate needing no AI reading step at all (Gate 1, a live database lookup) scored highest. Both gates depending on an LLM reading unstructured text (Gates 0 and 4) scored lower — including after multiple rounds of fixing the reading step. Gate 3's two lookups score lowest, but for a different reason (data coverage and a skewed ground truth — see Gate 3 below), so they don't test this comparison.</p>
 
 <hr class="divider">
 <h3 id="gate0">Gate 0 — the full correction story</h3>
@@ -62,15 +62,16 @@
 
 <hr class="divider">
 <h3 id="gate1">Gate 1 — the full improvement story</h3>
-<p style="color:#4A4740;">This gate went through five real iterations before reaching its final result. Nothing here is a first-try number.</p>
+<p style="color:#4A4740;">This gate went through six real iterations — two that failed outright before producing any result, then four scored runs — before reaching its final result. Nothing here is a first-try number.</p>
 <div id="gate1-chart" style="height:400px;"></div>
 <table style="margin-top:1rem;">
-    <tr><th>Iteration</th><th>Kappa</th></tr>
-    <tr><td>1. Wrong API endpoint</td><td>—</td></tr>
-    <tr><td>2. Fixed endpoint, wrong JSON parsing</td><td>—</td></tr>
-    <tr><td>3. Category-level matching</td><td>0.001</td></tr>
-    <tr><td>4. Product-level (reversed) matching</td><td>-0.017</td></tr>
-    <tr><td>5. Hybrid — final</td><td>0.412</td></tr>
+    <tr><th>Iteration</th><th>Agreement</th><th>Kappa</th></tr>
+    <tr><td>1. Wrong API query parameter (assumed, did not exist)</td><td>0 successful searches</td><td>n/a</td></tr>
+    <tr><td>2. Corrected endpoint, wrong JSON-nesting assumption</td><td>0 successful searches</td><td>n/a</td></tr>
+    <tr><td>3. Category-level matching, loosest rules (274 false positives)</td><td>63.1%</td><td>0.001</td></tr>
+    <tr><td>4. Category-level matching, tightened (66 false positives, e.g. Zinc vs "zinc-l-pidolate")</td><td>88.1%</td><td>0.125</td></tr>
+    <tr><td>5. Product-level (reversed) matching (false negatives on species-specific ingredients)</td><td>94.5%</td><td>-0.017</td></tr>
+    <tr><td>6. Hybrid: category-level plus a manual compound-exception list — final</td><td>96.5%</td><td><strong>0.412</strong></td></tr>
 </table>
 
 <hr class="divider">
@@ -104,7 +105,7 @@
 <h3 id="magnesium">A real, unplanned finding: the magnesium market</h3>
 <p style="color:#4A4740;">Pulled directly from real market data during Gate 0's validation work — not something this project set out to find.</p>
 <div id="magnesium-chart" style="height:380px;"></div>
-<p style="font-size:0.85rem; color:var(--muted);">Magnesium oxide — the form Gate 0 rejects outright on bioavailability grounds — is both the most heavily blended (88% of products combine it with at least one other form) and the most aggressively dosed (median 320mg) of the five forms studied. Magnesium L-Threonate, a costlier, better-absorbed form, is dosed lowest (144mg) and blended least (21%). Cheaper, lower-bioavailability forms pushed harder; costlier, better forms sold conservatively — a pattern this project didn't go looking for.</p>
+<p style="font-size:0.85rem; color:var(--muted);">Magnesium oxide — the form Gate 0 rejects outright on absorption grounds — is the most heavily blended of the five forms studied (88% of products combine it with at least one other form), and about 48% of oxide products exceed the 350 mg/day UK/EU safety limit. Magnesium L-Threonate, a specialised, better-absorbed form, is dosed lowest (median 144mg) and blended least (21%). Glycinate sits right at the limit (median 350mg). Across the five forms, lower-absorption forms tended to be blended more and dosed high — a pattern this project didn't go looking for.</p>
 
 <hr class="divider">
 <h3 id="limitations">What each gate's remaining errors are actually caused by</h3>
@@ -141,12 +142,12 @@ Plotly.newPlot('gate0-chart', [{
 }, {responsive: true});
 
 Plotly.newPlot('gate1-chart', [{
-    x: ["3. Category-level", "4. Product-level (reversed)", "5. Hybrid — final"],
-    y: [0.001, -0.017, 0.412],
+    x: ["3. Category-level (loosest)", "4. Category-level (tightened)", "5. Product-level (reversed)", "6. Hybrid — final"],
+    y: [0.001, 0.125, -0.017, 0.412],
     type: 'scatter', mode: 'lines+markers',
     line: {color: goldColor, width: 3}, marker: {size: 10, color: goldColor},
 }], {
-    title: "Gate 1: Cohen's kappa across iterations (first two failed outright — 0 successful API calls)",
+    title: "Gate 1: Cohen's kappa across the four scored iterations (iterations 1–2 failed outright — 0 successful API calls)",
     font: {family: "Inter, sans-serif"},
     paper_bgcolor: "white", plot_bgcolor: "white",
     yaxis: {title: "Cohen's kappa"},
@@ -170,7 +171,7 @@ Plotly.newPlot('magnesium-chart', [
      type: 'scatter', mode: 'lines+markers', name: 'Blended with another form (%)',
      line: {color: goldColor, width: 3}, marker: {size: 9, color: goldColor}, yaxis: 'y2'}
 ], {
-    title: "Cheaper, lower-bioavailability forms: dosed higher, blended more",
+    title: "Magnesium forms: median dose and blend rate",
     font: {family: "Inter, sans-serif"},
     paper_bgcolor: "white", plot_bgcolor: "white",
     yaxis: {title: "Median dose (mg)"},
